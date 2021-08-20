@@ -4,10 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Macbook Pro</title>
 </head>
 <body>
-    
+    <!-- start of main section -->
+    <main>
+        <section class="container my-5">
+            <div class="row gx-5">
+                <div class="col">
+                    <div class="">
+                        <img class="img-fluid" src="images/mac.png" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h2>Customize your Blue 24-inch iMac with Apple M1 chip.</h2>
+                        <p class="pb-2">Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt / USB 4 ports Magic Mouse Magic Keyboard - US English</p>
+                        <!-- Memory -->
+                        <div class="mb-5">
+                            <h5 class="pb-1">Memory</h5>
+                            <a class="btn p-2 border rounded" id="first-memory" href="#extra-memory" role="button">8GB unified memory</a>
+                            <a class="btn p-2 border rounded" id="second-memory" href="#extra-memory" role="button">16GB unified memory</a>
+                        </div>
+                        <!-- Storage-->
+                        <div class="mb-5">
+                            <h5 class="py-2">Storage</h5>
+                            <a class="btn p-2 border rounded" id="first-storage" href="#extra-storage" role="button">256GB SSD storage</a>
+                            <a class="btn p-2 border rounded" id="second-storage" href="#extra-storage" role="button">512GB SSD storage</a>
+                            <a class="btn p-2 border rounded" id="third-storage" href="#extra-storage" role="button">1TB SSD storage</a>
+                        </div>
+                        <!-- delivery-->
+                        <div class="mb-5">
+                            <h5 class="py-2">Choose your delivery option</h5>
+                            <a class="btn p-2 border rounded" id="free-delivery" href="#" role="button">Friday, Aug 25 FREE Prime Delivery</a>
+                            <a class="btn p-2 border rounded" id="prime-delivery" href="#" role="button">Friday, Aug 21 Delivery Charge $20</a>
+                        </div>
+                        <!-- total cost table-->
+                        <div class="mb-5">
+                            <table class="table">
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">Best Price</th>
+                                    <td>$<span id="best-price">1299</span></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Extra Memory Cost</th>
+                                    <td>$<span id="extra-memory">0</span></td>
+                                  </tr>
+                                   <tr>
+                                    <th scope="row">Extra Storage Cost</th>
+                                    <td>$<span id="extra-storage">0</span></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Delivery Charge</th>
+                                    <td colspan="2">$ <span id="delivery-charge">0</span></td>
+                                  </tr>
+                                </tbody>
+                                  <tr>
+                                    <th scope="col">Total Price</th>
+                                    <th scope="col">$<span id="total">1299</span></th>
+                                  </tr>
+                            </table>
+                        </div>
+
+                        <!-- pomo code -->
+
+                        <div class="">
+                            <h5>Add Pomo Code</h5>
+                            <input type="text" class="form-control d-inline w-50">
+                            <button class="btn btn-danger">Apply</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- horazental total section  -->
+        <section class="container my-5">
+            <hr>
+            <h2 class="text-center">Total: $<span id="grand-total">1299</span></h2>
+        </section>
+    </main>
 
 
     <!-- javascript -->
