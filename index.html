@@ -25,21 +25,21 @@
                         <!-- Memory -->
                         <div class="mb-5">
                             <h5 class="pb-1">Memory</h5>
-                            <a class="btn p-2 border rounded" id="first-memory" href="#extra-memory" role="button">8GB unified memory</a>
-                            <a class="btn p-2 border rounded" id="second-memory" href="#extra-memory" role="button">16GB unified memory</a>
+                            <a class="btn p-2 border rounded" id="first-memory"  role="button">8GB unified memory</a>
+                            <a class="btn p-2 border rounded" id="second-memory" role="button">16GB unified memory</a>
                         </div>
                         <!-- Storage-->
                         <div class="mb-5">
                             <h5 class="py-2">Storage</h5>
-                            <a class="btn p-2 border rounded" id="first-storage" href="#extra-storage" role="button">256GB SSD storage</a>
-                            <a class="btn p-2 border rounded" id="second-storage" href="#extra-storage" role="button">512GB SSD storage</a>
-                            <a class="btn p-2 border rounded" id="third-storage" href="#extra-storage" role="button">1TB SSD storage</a>
+                            <a class="btn p-2 border rounded" id="first-storage" role="button">256GB SSD storage</a>
+                            <a class="btn p-2 border rounded" id="second-storage" role="button">512GB SSD storage</a>
+                            <a class="btn p-2 border rounded" id="third-storage" role="button">1TB SSD storage</a>
                         </div>
                         <!-- delivery-->
                         <div class="mb-5">
                             <h5 class="py-2">Choose your delivery option</h5>
-                            <a class="btn p-2 border rounded" id="free-delivery" href="#" role="button">Friday, Aug 25 FREE Prime Delivery</a>
-                            <a class="btn p-2 border rounded" id="prime-delivery" href="#" role="button">Friday, Aug 21 Delivery Charge $20</a>
+                            <a class="btn p-2 border rounded" id="free-delivery" role="button">Friday, Aug 25 FREE Prime Delivery</a>
+                            <a class="btn p-2 border rounded" id="prime-delivery" role="button">Friday, Aug 21 Delivery Charge $20</a>
                         </div>
                         <!-- total cost table-->
                         <div class="mb-5">
@@ -73,8 +73,12 @@
 
                         <div class="">
                             <h5>Add Pomo Code</h5>
-                            <input type="text" class="form-control d-inline w-50">
-                            <button class="btn btn-danger">Apply</button>
+                            <div>
+                                <input type="text" id="discount_code1" class="form-control d-inline w-50">
+                            <small id="error" class="text-dark mt-3">code is stevekaku</small>
+                            </div>
+                            <!-- <button class="btn btn-danger" id="pomo-code">Apply</button> -->
+                            <button class="btn btn-danger btn-sm mt-3" onclick="discount_code()">Apply</button>
                         </div>
                         
                     </div>
@@ -86,7 +90,6 @@
             <hr>
             <h2 class="text-center">Total: $<span id="grand-total">1299</span></h2>
         </section>
-    </main>
 
 
     <!-- javascript -->

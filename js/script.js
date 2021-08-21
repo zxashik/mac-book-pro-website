@@ -1,3 +1,4 @@
+var discountCode = document.getElementById('discount_code1');
 // id call for memory
 const firstMemory = document.getElementById('first-memory');
 const secondMemory = document.getElementById('second-memory');
@@ -70,8 +71,8 @@ primeDelivery.addEventListener('click', function () {
 
 function updateMamoryCost() {
     const firstMemoryCost = Number(extraMemory.innerText);
-    const secondMemoryCost = Number(bestPrice.innerText);
-    // const secondMemoryCost = Number(total.innerText);
+    // const secondMemoryCost = Number(bestPrice.innerText);
+    const secondMemoryCost = Number(total.innerText);
     const sum = firstMemoryCost + secondMemoryCost;
     total.innerText = sum;
     grandTotal.innerText = sum;
@@ -79,16 +80,16 @@ function updateMamoryCost() {
 
 function updateStorageCost() {
     const firstStorageCost = Number(extraStorage.innerText);
-    const secondStorageCost = Number(bestPrice.innerText);
-    // const secondStorageCost = Number(total.innerText);
+    // const secondStorageCost = Number(bestPrice.innerText);
+    const secondStorageCost = Number(total.innerText);
     const sum = firstStorageCost + secondStorageCost;
     total.innerText = sum;
     grandTotal.innerText = sum;
 };
 function updateDeliveryCost() {
     const firstDeliveryCost = Number(deliveryCharge.innerText);
-    const secondDeliveryCost = Number(bestPrice.innerText);
-    // const secondStorageCost = Number(total.innerText);
+    // const secondDeliveryCost = Number(bestPrice.innerText);
+    const secondDeliveryCost = Number(total.innerText);
     const sum = firstDeliveryCost + secondDeliveryCost;
     total.innerText = sum;
     grandTotal.innerText = sum;
@@ -96,8 +97,15 @@ function updateDeliveryCost() {
 
 // code for 20% discaut cupon code 
 
-
-/* let num1 = 100;
-let num2 = 100*.2;
-let sum = num1 -num2;
-console.log(sum); */
+const discount_code = () => {
+    total.innerText = parseInt(grandTotal.innerHTML);
+    let error = document.getElementById('error');
+    if (discountCode.value === 'stevekaku') {
+        let newTotal = grandTotal.innerText / 5;
+        let newSum = grandTotal.innerText - newTotal;
+        grandTotal.innerText = newSum;
+        error.innerHTML = "code is valid";
+    } else {
+        error.innerHTML = "Try Again";
+    }
+};
